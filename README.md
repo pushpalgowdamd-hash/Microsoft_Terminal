@@ -1,11 +1,11 @@
 # Microsoft_Terminal
 Open Source
-# Open Source Contributions & Resume Tracker
+# Open Source Contributions & Systems Log
 
-## Microsoft Windows Terminal (`microsoft/terminal`)
-* **Pull Request:** [#20804](https://github.com/microsoft/terminal/pull/20804)
-* **Topic:** OSC 8 Hyperlink / URI Handling
-
-### 2-Sentence Resume Summary
-* Contributed Pull Request #20804 to `microsoft/terminal` to improve OSC 8 terminal hyperlink and URI parsing/handling. 
-* Resolved edge-case URI processing issues in the terminal engine to ensure reliable, standards-compliant clickable link rendering.
+## PR #1: Microsoft Terminal (Windows Terminal)
+- **Repository:** microsoft/terminal
+- **PR Number:** #20804 (Resolves Issue #20803)
+- **Status:** In Review
+- **Core Tech:** C++, UTF-8/UTF-16 encoding, URI Percent-Decoding, Win32 API.
+- **Summary:** Fixed an issue where Ctrl+clicking file URI links containing non-ASCII characters failed in `ShellExecuteW`. Implemented `_GetLaunchPathForUri` to unescape percent-encoded UTF-8 bytes into wide characters and normalize forward slashes to backslashes before dispatching to the OS.
+- **Key Takeaways:** Real-world Git fork/PR flow, addressing maintainer review comments, string byte representations, and URI path parsing.
